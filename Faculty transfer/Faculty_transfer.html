@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คำร้องขอโอนย้ายสาขาวิชาต่างคณะ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="ft.js"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen py-8">
+  <form class="max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden" method="post" action="#">
+    <!-- Header Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 px-8 py-6">
+      <div class="flex justify-between items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/270px-MJU_LOGO.svg.png" 
+             alt="mju-logo" class="w-20 h-auto bg-white p-2 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold text-white bg-white bg-opacity-20 px-4 py-2 rounded-lg backdrop-blur-sm">
+          มจท 16
+        </h1>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="px-8 py-6">
+      <!-- Title Section -->
+      <div class="text-center mb-8 bg-gradient-to-r from-indigo-100 to-purple-100 py-6 rounded-xl">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">คำร้องขอโอนย้ายสาขาวิชาต่างคณะ</h2>
+        <p class="text-gray-600 text-lg">สำหรับหลักสูตร 4 ปี และหลักสูตร 4 ปีเทียบเข้าเรียน (2ปี)</p>
+      </div>
+
+      <!-- Location and Date -->
+      <div class="flex justify-between items-center mb-8 bg-gray-50 p-4 rounded-lg">
+        <p class="text-gray-700 font-medium">เขียนที่ มหาวิทยาลัยแม่โจ้</p>
+        <div class="flex items-center space-x-2">
+          <label class="text-gray-700 font-medium">วันที่</label>
+          <input type="date" name="date" class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          <p class="error-message hidden text-red-500 text-sm"></p>
+        </div>
+      </div>
+
+      <!-- Subject Section -->
+      <div class="mb-8 bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+        <p class="text-lg font-semibold text-gray-800 mb-4">เรื่อง ขอโอนย้ายสาขาวิชาต่างคณะ</p>
+        <div class="flex items-center space-x-2">
+          <label class="text-gray-700 font-medium">เรียน คณบดีคณะ (คณะใหม่)</label>
+          <input type="text" name="deanFaculty" class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+          <p class="error-message hidden text-red-500 text-sm"></p>
+        </div>
+      </div>
+
+      <div class="mb-8 bg-amber-50 p-4 rounded-lg border-l-4 border-amber-400">
+        <p class="text-gray-800 font-medium">สิ่งที่ส่งมาด้วย ใบรายงานผลการศึกษา</p>
+      </div>
+
+      <!-- Personal Information -->
+      <div class="mb-8">
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">1</span>
+            ข้อมูลส่วนตัว
+          </h3>
+          <p class="text-gray-700 mb-4">ข้าพเจ้า</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">คำนำหน้า</label>
+              <select name="nameTitle" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all">
+                <option value="">เลือกคำนำหน้า</option>
+                <option value="นาย">นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+              </select>
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ชื่อ-นามสกุล</label>
+              <input type="text" name="fullName" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">รหัสนักศึกษา</label>
+              <input type="text" name="studentCode" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">เบอร์โทรศัพท์</label>
+              <input type="text" name="phone" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Information -->
+      <div class="mb-8">
+        <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">2</span>
+            ข้อมูลการศึกษา
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ระบบ</label>
+              <input type="text" name="system" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">หลักสูตร</label>
+              <select name="course" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                <option value="">เลือกหลักสูตร</option>
+                <option value="4-5 ปี">4-5 ปี</option>
+                <option value="4 ปีเทียบเข้าเรียน (2ปี)">4 ปีเทียบเข้าเรียน (2ปี)</option>
+              </select>
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ภาค</label>
+              <select name="section" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                <option value="">เลือกภาค</option>
+                <option value="ภาคปกติ">ภาคปกติ</option>
+                <option value="ภาคสมทบ">ภาคสมทบ</option>
+              </select>
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">สาขาวิชาเดิม</label>
+              <input type="text" name="major" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">คณะเดิม</label>
+              <input type="text" name="faculty" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transfer Request -->
+      <div class="mb-8">
+        <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">3</span>
+            คำร้องขอโอนย้าย
+          </h3>
+          <div class="mb-4">
+            <p class="text-gray-700 mb-2">มีความประสงค์จะขอโอนย้ายไปสาขาวิชา</p>
+            <input type="text" name="newMajor" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all">
+            <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">เหตุผล</label>
+            <textarea name="reason" rows="4" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"></textarea>
+            <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualifications -->
+      <div class="mb-8">
+        <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-xl border border-teal-200">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">4</span>
+            คุณสมบัติ
+          </h3>
+          <p class="text-gray-800 mb-4 font-medium">ทั้งนี้ ข้าพเจ้ามีคุณสมบัติครบถ้วนในการขอย้ายสาขาวิชา ดังนี้ คือ</p>
+          
+          <div class="bg-white p-4 rounded-lg mb-4 border border-teal-100">
+            <p class="font-semibold text-teal-700 mb-2">หลักสูตร 4 เทียบเข้าเรียน (2ปี)</p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+              <li>ได้ศึกษาตามแผนการศึกษาในสาขาวิชาเดิมมาแล้วไม่น้อยกว่า 1 ภาคการศึกษาปกติ</li>
+              <li>มีหน่วยกิตสะสมไม่น้อยกว่า 18 หน่วยกิต และมีแต้มระดับคะแนนเฉลี่ยสะสมไม่น้อยกว่า 2.00</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg mb-4 border border-teal-100">
+            <p class="font-semibold text-teal-700 mb-2">หลักสูตร 4 ปี</p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+              <li>ได้ศึกษาตามแผนการศึกษาในสาขาวิชาเดิมมาแล้วไม่น้อยกว่า 2 ภาคการศึกษาปกติ</li>
+              <li>มีหน่วยกิตสะสมไม่น้อยกว่า 30 หน่วยกิต และมีแต้มระดับคะแนนเฉลี่ยสะสมไม่น้อยกว่า 2.00</li>
+            </ul>
+          </div>
+          
+          <div class="flex items-center space-x-2">
+            <p class="text-gray-700">และ ยื่นคำร้องโอนย้ายสาขาวิชาภายในคณะก่อนวันที่</p>
+            <input type="date" name="deadlineDate" class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all">
+            <p class="error-message hidden text-red-500 text-sm"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Signature -->
+      <div class="mb-8">
+        <div class="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-200">
+          <p class="text-gray-800 mb-4 text-center text-lg">จึงเรียนมาเพื่อโปรดพิจารณาอนุมัติ</p>
+          <p class="text-gray-800 mb-4 text-center">ขอแสดงความนับถือ</p>
+          <div class="max-w-md mx-auto">
+            <label class="block text-gray-700 font-medium mb-2 text-center">ลายเซ็นนักศึกษา</label>
+            <input type="file" name="studentsign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+            <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Approval Sections -->
+      <div class="space-y-6">
+        <!-- Old Major Approval -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-blue-100 px-4 py-2 rounded-lg">ความเห็นชอบของสาขาวิชาเดิม</h3>
+          <textarea name="oldMajorComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นอาจารย์ที่ปรึกษา</label>
+              <input type="file" name="advisersign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="adviserDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Major Opinion -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-green-100 px-4 py-2 rounded-lg">ความเห็นของสาขาวิชาที่จะรับโอนย้าย</h3>
+          <textarea name="newMajorComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นประธานกรรมการบริหารหลักสูตร</label>
+              <input type="file" name="curriculumsign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="curriculumDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old Curriculum Committee -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-purple-100 px-4 py-2 rounded-lg">ความเห็นประธานกรรมการบริหารหลักสูตร (สาขาเดิม)</h3>
+          <textarea name="oldCurriculumComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นประธานกรรมการบริหารหลักสูตร</label>
+              <input type="file" name="oldCurriculumsign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="oldCurriculumDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old Dean Approval -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-orange-100 px-4 py-2 rounded-lg">ความเห็นคณบดีคณะ (คณะเดิม)</h3>
+          <textarea name="oldDeanComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="mb-4">
+            <div class="flex items-center space-x-6">
+              <label class="flex items-center">
+                <input type="radio" name="oldDeanApproval" value="เห็นชอบ" class="mr-2 text-green-600 focus:ring-green-500">
+                <span class="text-gray-700">เห็นชอบ</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="oldDeanApproval" value="ไม่เห็นชอบ" class="mr-2 text-red-600 focus:ring-red-500">
+                <span class="text-gray-700">ไม่เห็นชอบ</span>
+              </label>
+            </div>
+            <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นคณบดีคณะ</label>
+              <input type="file" name="oldDeansign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="oldDeanDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Curriculum Committee 2 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-teal-100 px-4 py-2 rounded-lg">ความเห็นประธานกรรมการบริหารหลักสูตร (สาขาใหม่)</h3>
+          <textarea name="newCurriculumComment2" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นประธานกรรมการบริหารหลักสูตร</label>
+              <input type="file" name="newCurriculumsign2" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="newCurriculumDate2" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Dean Approval -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-indigo-100 px-4 py-2 rounded-lg">ความเห็นคณบดีคณะ (คณะใหม่)</h3>
+          <textarea name="newDeanComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="mb-4">
+            <div class="flex items-center space-x-6">
+              <label class="flex items-center">
+                <input type="radio" name="newDeanApproval" value="อนุมัติ" class="mr-2 text-green-600 focus:ring-green-500">
+                <span class="text-gray-700">อนุมัติ</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="newDeanApproval" value="ไม่อนุมัติ" class="mr-2 text-red-600 focus:ring-red-500">
+                <span class="text-gray-700">ไม่อนุมัติ</span>
+              </label>
+            </div>
+            <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นคณบดีคณะ</label>
+              <input type="file" name="newDeansign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="newDeanDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treasury Section -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-yellow-100 px-4 py-2 rounded-lg">งานเงินรายได้ กองคลัง ชั้น 1 สำนักงานอธิการบดี</h3>
+          <p class="text-gray-700 mb-4 bg-yellow-50 p-3 rounded-lg border border-yellow-200">ได้รับชำระเงินจำนวน 500 บาท เป็นที่เรียบร้อยแล้ว</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">เล่มที่ใบเสร็จ</label>
+              <input type="text" name="receiptBook" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">เลขที่ใบเสร็จ</label>
+              <input type="text" name="receiptNumber" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นผู้รับเงิน</label>
+              <input type="file" name="treasurysign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="treasuryDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director Section -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-red-100 px-4 py-2 rounded-lg">ผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ</h3>
+          <textarea name="directorComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นผู้อำนวยการ</label>
+              <input type="file" name="directorsign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="directorDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registrar Section -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-pink-100 px-4 py-2 rounded-lg">หัวหน้ากลุ่มภารกิจทะเบียนเรียน</h3>
+          <textarea name="registrarComment" rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all resize-none mb-4"></textarea>
+          <p class="error-message hidden text-red-500 text-sm mb-4"></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นหัวหน้ากลุ่มภารกิจ</label>
+              <input type="file" name="registrarsign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="registrarDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Officer Section -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-gray-800 mb-4 bg-gray-100 px-4 py-2 rounded-lg">สำหรับเจ้าหน้าที่ดำเนินการ</h3>
+          <p class="text-gray-700 mb-4 bg-green-50 p-3 rounded-lg border border-green-200">ดำเนินการย้ายสาขาวิชาเป็นที่เรียบร้อยแล้ว</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">รหัสนักศึกษาใหม่</label>
+              <input type="text" name="newStudentCode" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">ลายเซ็นเจ้าหน้าที่</label>
+              <input type="file" name="officersign" accept="image/*" class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">วันที่</label>
+              <input type="date" name="officerDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all">
+              <p class="error-message hidden text-red-500 text-sm mt-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notes Section -->
+      <div class="mt-8 mb-8">
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <span class="bg-amber-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">!</span>
+            หมายเหตุ
+          </h3>
+          <div class="space-y-3">
+            <div class="bg-white p-4 rounded-lg border border-amber-100">
+              <p class="text-gray-700 flex items-start">
+                <span class="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">1</span>
+                การโอนย้ายสาขาวิชาทั้งภายในคณะ และต่างคณะ จะกระทำได้เพียงครั้งเดียว
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-amber-100">
+              <p class="text-gray-700 flex items-start">
+                <span class="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">2</span>
+                การยื่นคำร้องขอโอนย้ายสาขาวิชาทั้งภายในคณะ และต่างคณะ ที่ได้นับอนุมัติแล้ว จะต้องยื่นที่กลุ่มภารกิจทะเบียนเรียนประมวลผล และรับเข้าสำนักบริหารและพัฒนาวิชาการ ก่อนเริ่มเปิดภาคเรียนปกติที่ขอโอนย้ายไม่น้อยกว่า 4 สัปดาห์
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-amber-100">
+              <p class="text-gray-700 flex items-start">
+                <span class="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">3</span>
+                นักศึกษาที่ขอโอนย้ายสาขาวิชาต่างคณะ จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนย้ายเข้า ก่อนจบการศึกษาและมีสิทธิ์ขอรับปริญญา ดังนี้
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-amber-100">
+              <p class="text-gray-700 flex items-start">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">A</span>
+                หลักสูตร 4 ปี เทียบเข้าเรียน (2ปี) จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนย้ายเข้า ไม่น้อยกว่า 2 ภาคการศึกษาปกติ
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-amber-100">
+              <p class="text-gray-700 flex items-start">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">B</span>
+                หลักสูตร 4 ปี จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนย้ายเข้า ไม่น้อยกว่า 4 ภาคการศึกษาปกติ
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex justify-end space-x-4 bg-gray-50 p-6 rounded-xl">
+        <button type="button" class="bg-gray-400 hover:bg-gray-500 text-white font-medium px-8 py-3 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg">
+          ยกเลิก
+        </button>
+        <button type="submit" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium px-8 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          ส่งคำร้อง
+        </button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventBooking Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="eventbk.css">
+</head>
+
+<body
+    class="w-screen h-screen bg-center bg-cover bg-[url(https://nique.net/wp-content/uploads/2022/10/jjpLtgtY-1536x1024.jpg)] flex justify-center items-center overflow-hidden">
+    <div class="flex justify-center items-center flex-col w-full h-full bg-black/20 overflow-hidden">
+        <h1 id="title" class="mb-6 text-5xl md:text-7xl text-[#ed5252] text-shadow-md font-black">ONE OK ROCK</h1>
+        <h3 id="subtitle" class="mb-3 text-lg sm:text-xl md:text-2xl text-[#d4a650] stroke-2 text-shadow-md font-bold">
+            World tour @กรุงเทพฯ และเชียงใหม่ ประเทศไทย
+        </h3>
+        <h3 id="subtitle" class="mb-8 text-lg sm:text-xl md:text-2xl text-[#d4a650] stroke-2 text-shadow-md font-bold">
+            25 ธันวาคม 2025
+        </h3>
+        <div class="flex gap-4 justify-center mt-6">
+            <button onclick="callform()"
+                class="btn-part px-8 py-4 rounded-full text-white text-xl font-black bg-gradient-to-r from-red-500 to-pink-500 border-2 border-transparent backdrop-blur-md shadow-lg hover:shadow-2xl duration-300 ease-out">
+                จองบัตร
+            </button>
+
+            <button
+                class="btn-part px-8 py-4 rounded-full text-gray-300 text-xl font-black bg-black/60 border-2 border-gray-500 backdrop-blur-md shadow-lg hover:shadow-2xl transition duration-300 ease-out">
+                ข้อมูลเพิ่มเติม
+            </button>
+        </div>
+
+    </div>
+
+    <form id="bookingForm"
+        class="fixed top-[100vh] bg-[#FDFDFD]/80 backdrop-blur-xl w-screen h-screen flex flex-col justify-center items-center overflow-y-auto p-12"
+        onsubmit="validateForm(event)">
+
+        <h2 class="text-3xl font-bold py-6">จองบัตรคอนเสิร์ต</h2>
+
+        <div class="mb-4 w-full max-w-md">
+            <label class="block font-semibold mb-1">ชื่อ-นามสกุล</label>
+            <input type="text" id="name" placeholder="กรอกชื่อ-นามสกุล" novalidate
+                class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 bg-white">
+            <p class="text-red-500 text-sm mt-1 hidden" id="nameError">กรุณากรอกชื่อ-นามสกุล</p>
+        </div>
+
+        <div class="mb-4 w-full max-w-md">
+            <label class="block font-semibold mb-1">อีเมล</label>
+            <input type="email" id="email" placeholder="กรอกอีเมล" novalidate
+                class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 bg-white">
+            <p class="text-red-500 text-sm mt-1 hidden" id="emailError">กรุณากรอกอีเมลที่ถูกต้อง</p>
+        </div>
+
+        <div class="mb-4 w-full max-w-md">
+            <label class="block font-semibold mb-1">เบอร์โทรศัพท์</label>
+            <input type="tel" id="phone" placeholder="กรอกเบอร์โทรศัพท์" novalidate
+                class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 bg-white">
+            <p class="text-red-500 text-sm mt-1 hidden" id="phoneError">กรุณากรอกเบอร์โทรศัพท์ที่ถูกต้อง</p>
+        </div>
+
+        <div class="mb-4 w-full max-w-md">
+            <label class="block font-semibold mb-1">อายุ</label>
+            <input type="number" id="age" placeholder="กรอกอายุ" min="18" max="80" novalidate
+                class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 bg-white">
+            <p class="text-red-500 text-sm mt-1 hidden" id="ageError">อายุต้องอยู่ระหว่าง 18 ถึง 80 ปี</p>
+        </div>
+
+        <div class="mb-6 w-full max-w-md">
+            <label class="block font-semibold mb-1">เลือกโซน / ราคา</label>
+            <select id="zone" novalidate
+                class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 bg-white">
+                <option value="">เลือกโซน</option>
+                <option value="zoneA">โซน A - 1,800 บาท</option>
+                <option value="zoneB">โซน B - 1,200 บาท</option>
+                <option value="zoneC">โซน C - 700 บาท</option>
+            </select>
+            <p class="text-red-500 text-sm mt-1 hidden" id="zoneError">กรุณาเลือกโซน</p>
+        </div>
+
+        <div class="flex gap-4">
+            <button type="submit"
+                class="px-8 py-3 rounded-full bg-amber-500 text-white font-bold hover:bg-amber-600 duration-300">ยืนยัน</button>
+            <button type="button" onclick="closeForm()"
+                class="px-8 py-3 rounded-full bg-gray-300 text-gray-800 font-bold hover:bg-gray-600 duration-300">ยกเลิก</button>
+        </div>
+    </form>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="eventbk.js"></script>
+
+</html>
